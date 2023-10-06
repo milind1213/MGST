@@ -14,7 +14,7 @@ import com.github.javafaker.service.RandomService;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestClass {
+public class T001_BroweserInvoking {
 	Faker faker = new Faker();
 
 	@Test
