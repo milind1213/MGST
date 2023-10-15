@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.T002_LoginFeature">
+      <class name="com.MGS.testCases.CermatiAssigment">
         <methods>
-          <include name="loginMethod"/>
+          <include name="initializeWebDriver"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="TC02_Access_Product_via_Search"/>
         </methods>
-      </class> <!-- TestCases.T002_LoginFeature -->
+      </class> <!-- com.MGS.testCases.CermatiAssigment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
