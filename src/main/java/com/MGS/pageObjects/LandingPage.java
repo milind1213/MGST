@@ -15,10 +15,6 @@ public class LandingPage extends AbstractComponent{
 	}
 
 	public void goTo(String url) {
-		String defaultUrl = "https://basecopy5.staging.pg-test.com/v2/";
-		if (url == null) {
-			url = defaultUrl;
-		}
 		driver.get(url);
 	}
 

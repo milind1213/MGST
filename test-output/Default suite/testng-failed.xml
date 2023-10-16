@@ -7,8 +7,8 @@
         <methods>
           <include name="initializeWebDriver"/>
           <include name="launchApplication"/>
+          <include name="TC01_Access_Product_via_Applying_Multiple_Filters"/>
           <include name="tearDown"/>
-          <include name="TC02_Access_Product_via_Search"/>
         </methods>
       </class> <!-- com.MGS.testCases.CermatiAssigment -->
     </classes>

@@ -80,7 +80,7 @@ public class BaseTest {
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		if (driver != null) {
-			driver.quit();
+			//driver.quit();
 		}
 		log.debug("[ Test Execution Completed ]");
 	}
@@ -134,47 +134,6 @@ public class BaseTest {
 		return r.nextInt(max - min + 1) + min;
 	}
 
-	public static String generateRandomMobileNumber() {
-
-		return "9453" + RandomStringUtils.randomNumeric(4) + "000";
-	}
-
-	public static String generateRandomTestMobileNumber() {
-
-		return "1" + RandomStringUtils.randomNumeric(9);
-	}
-
-	public static String generateRandomAmount() {
-		return RandomStringUtils.randomNumeric(5);
-	}
-
-	public static String generateRandomDigit() {
-		return RandomStringUtils.randomNumeric(1);
-	}
-
-	public static String generateRandomDigits(int length) {
-		return RandomStringUtils.randomNumeric(length);
-	}
-
-	public static String generateRandomAlphabets(int length) {
-		return RandomStringUtils.randomAlphabetic(length);
-	}
-
-	public static String generateRandomName() {
-		return RandomStringUtils.randomAlphanumeric(5);
-	}
-
-	public static String generateRandomNameForSSN() {
-		return RandomStringUtils.randomAlphabetic(5);
-	}
-
-	public static String generateRandomNameForPayRent() {
-		return RandomStringUtils.randomAlphanumeric(5).concat("_Test _Automation");
-	}
-
-	public static String generateRandomEmail() {
-		return RandomStringUtils.randomNumeric(4) + "@gmail.com";
-	}
 
 	public static HashMap<String, HashMap<String, Integer>> EXTENT_METHOD_COUNT = new HashMap<>();
 	public static String suiteCount = "", proj = "";

@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
-import com.MGS.pageObjects.EbayPage;
+import com.MGS.pageObjects.HomePage;
 import com.MGS.testComponent.BaseTest;
 
 public class CermatiAssigment extends BaseTest {
@@ -15,7 +15,7 @@ public class CermatiAssigment extends BaseTest {
 		String PhoneConditionType = "New";
 		String fromPrice = "230", toPrice = "500";
 		String location = "US Only";
-		EbayPage users = new EbayPage(driver);
+		HomePage users = new HomePage(driver);
 
 		log.debug("[ Clicking on [Shop By Category ]");
 		users.clickingOnshopByCategoryBtn();
@@ -24,26 +24,15 @@ public class CermatiAssigment extends BaseTest {
 		users.selectingPhonesAndSmartphones();
 		log.debug("[ Selecting [Phones And Smartphones ]");
 
-		log.debug("[ Clicking " + filterBycondition + " filter option ]");
-		users.selectFilterOptions(filterBycondition);
-		
+		log.debug("[ Clicking " + filterBycondition + "And Selecting" + PhoneConditionType + " option ]");
+		users.applyConditionFilter(filterBycondition, PhoneConditionType);
 
-		log.debug("[ Selecting Phone Condition type " + PhoneConditionType + " ]");
-		users.applyingPhoneConditionFilter("New");
+		log.debug("[ Clicking on " + filterByprice + ",Entering From " + fromPrice + " And To " + toPrice + "] Amount");
+		users.applyPriceFilter(filterByprice, fromPrice, toPrice);
 
-		log.debug("[ Selecting Filter By " + filterByprice + " Option ] ");
-		users.selectFilterOptions(filterByprice);
+		log.debug("[ Clicking on " + filterByLocation + "And Selecting " + location + " Option ");
+		users.applyItemLocationFilter(filterByLocation, location);
 
-		log.debug("[ Entering " + fromPrice + " and " + toPrice + " in price Textbox ]");
-		users.appliyingPriceFilter(fromPrice, toPrice);
-
-		log.debug("[ Selecting filter By " + filterByLocation + " option ]");
-		users.selectFilterOptions(filterByLocation);
-
-		log.debug("[ Selecting " + location + " Option from List ]");
-		users.applyingItemLocationFilter(location);
-		
-		// Validating Applied Tag
 		log.debug("[ Validating  Applied Condition  Tag ]");
 		String actualConditionTag = users.getPhoneCondtionTagText();
 		AssertJUnit.assertEquals(actualConditionTag, filterBycondition);
@@ -55,23 +44,23 @@ public class CermatiAssigment extends BaseTest {
 		log.debug("[ Validating  Applied Item Location Tag ]");
 		String actualItemLocationTag = users.getItemLocationTagText();
 		AssertJUnit.assertEquals(actualItemLocationTag, filterByLocation);
-		
+
 	}
 
 	@Test(priority = 2)
 	public void TC02_Access_Product_via_Search() {
 		String item = "c1700s";
-		String productCategory = "Antiques"; 
-		EbayPage users = new EbayPage(driver);
+		String productCategory = "Antiques";
+		HomePage users = new HomePage(driver);
 
-		log.debug("[ Entering "+item+" in Searchbar & Selecting "+productCategory+"from DropDown ]");
-		users.SerchItemInSearchbar(item,productCategory);
+		log.debug("[ Entering " + item + " in Searchbar & Selecting " + productCategory + "from DropDown ]");
+		users.SerchItemInSearchbar(item, productCategory);
 		log.debug("[ clicking on Search Button ]");
-		
+
 		log.debug("[ Validating First Result Name Match  with Search string.]");
-		String actualText  = users.getFirstResultValidation();
+		String actualText = users.getFirstResultValidation();
 		AssertJUnit.assertTrue(actualText.contains(item));
-		
+
 	}
 
 }
