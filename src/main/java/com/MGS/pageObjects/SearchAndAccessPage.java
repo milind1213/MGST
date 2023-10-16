@@ -3,10 +3,10 @@ package com.MGS.pageObjects;
 import org.openqa.selenium.*;
 import com.MGS.utilities.AbstractComponent;
 
-public class HomePage extends AbstractComponent {
+public class SearchAndAccessPage extends AbstractComponent {
 	static WebDriver driver;
 
-	public HomePage(WebDriver driver) {
+	public SearchAndAccessPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 	}

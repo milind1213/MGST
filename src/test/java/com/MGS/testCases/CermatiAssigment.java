@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
-import com.MGS.pageObjects.HomePage;
+import com.MGS.pageObjects.SearchAndAccessPage;
 import com.MGS.testComponent.BaseTest;
 
 public class CermatiAssigment extends BaseTest {
@@ -15,8 +15,8 @@ public class CermatiAssigment extends BaseTest {
 		String PhoneConditionType = "New";
 		String fromPrice = "230", toPrice = "500";
 		String location = "US Only";
-		HomePage users = new HomePage(driver);
-
+		SearchAndAccessPage users = new SearchAndAccessPage(driver);
+		
 		log.debug("[ Clicking on [Shop By Category ]");
 		users.clickingOnshopByCategoryBtn();
 
@@ -51,7 +51,7 @@ public class CermatiAssigment extends BaseTest {
 	public void TC02_Access_Product_via_Search() {
 		String item = "c1700s";
 		String productCategory = "Antiques";
-		HomePage users = new HomePage(driver);
+		SearchAndAccessPage users = new SearchAndAccessPage(driver);
 
 		log.debug("[ Entering " + item + " in Searchbar & Selecting " + productCategory + "from DropDown ]");
 		users.SerchItemInSearchbar(item, productCategory);
