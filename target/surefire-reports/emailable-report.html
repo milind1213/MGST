@@ -9,11 +9,20 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">129,675</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">68,485</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.MGS.testCases.CermatiAssigment</td><td><a href="#m0">TC01_Access_Product_via_Applying_Multiple_Filters</a></td><td rowspan="1">1697376540254</td><td rowspan="1">55404</td></tr><tr class="passedeven"><td><a href="#m1">TC02_Access_Product_via_Search</a></td><td rowspan="1">1697376599152</td><td rowspan="1">4719</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.MGS.testCases.CermatiAssigment</td><td><a href="#m0">TC01_Access_Product_via_Applying_Multiple_Filters</a></td><td rowspan="1">1699899158313</td><td rowspan="1">51454</td></tr><tr class="failedeven"><td><a href="#m1">TC02_Access_Product_via_Search</a></td><td rowspan="1">1699899215064</td><td rowspan="1">5968</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.MGS.testCases.CermatiAssigment#TC01_Access_Product_via_Applying_Multiple_Filters</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.MGS.testCases.CermatiAssigment#TC02_Access_Product_via_Search</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.MGS.testCases.CermatiAssigment#TC01_Access_Product_via_Applying_Multiple_Filters</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Failed to click on element [By.xpath: //*[@class=&apos;x-flyout__button&apos;]//*[contains(.,&apos;filters applied&apos;)]] 
+	at org.junit.Assert.fail(Assert.java:93)
+	at com.MGS.utilities.AbstractComponent.click(AbstractComponent.java:67)
+	at com.MGS.pageObjects.SearchAndAccessPage.getPhoneCondtionTagText(SearchAndAccessPage.java:109)
+	at com.MGS.testCases.CermatiAssigment.TC01_Access_Product_via_Applying_Multiple_Filters(CermatiAssigment.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.MGS.testCases.CermatiAssigment#TC02_Access_Product_via_Search</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 
+	at com.MGS.testCases.CermatiAssigment.TC02_Access_Product_via_Search(CermatiAssigment.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -65,6 +65,7 @@ public class SearchAndAccessPage extends AbstractComponent {
 			String itemLocationXPath = "//span[contains(text(),'" + itemLocation + "')]//ancestor::span//input";
 			WebElement locationElement = driver.findElement(By.xpath(itemLocationXPath));
 			locationElement.click();
+			Thread.sleep(2000);
 			click(applyFilterBtn);
 			waitFor(2);
 		} catch (Exception e) {
@@ -106,6 +107,7 @@ public class SearchAndAccessPage extends AbstractComponent {
 
 	
 	public String getPhoneCondtionTagText() {
+		waitForElementDisplay(appliedFilterbtn,5);
 		click(appliedFilterbtn);
 		WebElement appliedFileterElement = driver.findElement(By.xpath("(//span[contains(@class,'brm__item-label')])[1]"));
 		waitForElementDisplay(appliedFileterElement, 3);
